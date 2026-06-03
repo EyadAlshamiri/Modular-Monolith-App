@@ -1,0 +1,23 @@
+<Solution>
+    <Configurations>
+        <Platform Name="Any CPU" />
+    </Configurations>
+    <Folder Name="/src/">
+        <Project Path="src/ModularCrm.Domain/ModularCrm.Domain.csproj" />
+        <Project Path="src/ModularCrm.Application/ModularCrm.Application.csproj" />
+        <Project Path="src/ModularCrm.EntityFrameworkCore/ModularCrm.EntityFrameworkCore.csproj" />
+        <Project Path="src/ModularCrm.Domain.Shared/ModularCrm.Domain.Shared.csproj" />
+        <Project Path="src/ModularCrm.Application.Contracts/ModularCrm.Application.Contracts.csproj" />
+        <Project Path="src/ModularCrm.HttpApi/ModularCrm.HttpApi.csproj" />
+        <Project Path="src/ModularCrm.HttpApi.Client/ModularCrm.HttpApi.Client.csproj" />
+        <Project Path="src/ModularCrm.HttpApi.Host/ModularCrm.HttpApi.Host.csproj" />
+        <Project Path="src/ModularCrm.DbMigrator/ModularCrm.DbMigrator.csproj" />
+    </Folder>
+    <Folder Name="/test/">
+        <Project Path="test/ModularCrm.Application.Tests/ModularCrm.Application.Tests.csproj" />
+        <Project Path="test/ModularCrm.EntityFrameworkCore.Tests/ModularCrm.EntityFrameworkCore.Tests.csproj" />
+        <Project Path="test/ModularCrm.TestBase/ModularCrm.TestBase.csproj" />
+        <Project Path="test/ModularCrm.Domain.Tests/ModularCrm.Domain.Tests.csproj" />
+        <Project Path="test/ModularCrm.HttpApi.Client.ConsoleTestApp/ModularCrm.HttpApi.Client.ConsoleTestApp.csproj" />
+    </Folder>
+</Solution>
