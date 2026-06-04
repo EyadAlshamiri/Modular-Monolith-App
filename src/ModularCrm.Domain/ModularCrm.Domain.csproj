@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ModularCrm.Domain.Shared\ModularCrm.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\modules\ModularCrm.Catalog\ModularCrm.Catalog\ModularCrm.Catalog.csproj" />
   </ItemGroup>
 
   <ItemGroup>

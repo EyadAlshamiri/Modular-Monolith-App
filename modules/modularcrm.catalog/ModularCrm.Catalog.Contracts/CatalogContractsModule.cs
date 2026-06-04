@@ -19,6 +19,12 @@ public class CatalogContractsModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+
+
+        Configure<AbpExceptionLocalizationOptions>(options =>
+        {
+            options.MapCodeNamespace("Catalog", typeof(CatalogResource));
+        });
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
             options.FileSets.AddEmbedded<CatalogContractsModule>();
@@ -32,9 +38,5 @@ public class CatalogContractsModule : AbpModule
                 .AddVirtualJson("/Localization/Catalog");
         });
 
-        Configure<AbpExceptionLocalizationOptions>(options =>
-        {
-            options.MapCodeNamespace("Catalog", typeof(CatalogResource));
-        });
     }
 }

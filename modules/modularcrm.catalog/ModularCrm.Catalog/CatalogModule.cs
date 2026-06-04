@@ -37,5 +37,14 @@ public class CatalogModule : AbpModule
              * options.AddRepository<Question, EfCoreQuestionRepository>();
              */
         });
+
+        Configure<AbpAspNetCoreMvcOptions>(options =>
+        {
+            options.ConventionalControllers.Create(typeof(CatalogModule).Assembly, settings =>
+            {
+                settings.RootPath = "catalog";
+            });
+        });
+
     }
 }
