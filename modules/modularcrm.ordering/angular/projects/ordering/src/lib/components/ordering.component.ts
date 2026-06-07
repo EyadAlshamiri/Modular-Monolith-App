@@ -1,14 +1,22 @@
-import { Component, inject } from '@angular/core';
-import { OrderingService } from '../services/ordering.service';
+import { Component, OnInit, inject } from '@angular/core';
+import { OrderDto, OrderService } from '../proxy/';
+import { ThemeSharedModule } from '@abp/ng.theme.shared';
+import { CoreModule } from '@abp/ng.core';
 
 @Component({
   selector: 'lib-ordering',
-  template: ` <p>ordering works!</p> `,
+  templateUrl: './ordering.component.html',
+  standalone: true,
+  imports: [ThemeSharedModule, CoreModule],
 })
-export class OrderingComponent {
-  protected readonly service = inject(OrderingService);
+export class OrderingComponent implements OnInit {
+  orders: OrderDto[] = [];
 
-  constructor() {
-    this.service.sample().subscribe(console.log);
+  protected readonly orderService = inject(OrderService);
+
+  ngOnInit(): void {
+    this.orderService.getList().subscribe(response => {
+      this.orders = response;
+    });
   }
 }

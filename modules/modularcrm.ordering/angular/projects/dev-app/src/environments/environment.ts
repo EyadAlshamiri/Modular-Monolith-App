@@ -11,7 +11,7 @@ export const environment = {
   },
   apis: {
     default: {
-      url: '',
+      url: 'https://localhost:44381',
       rootNamespace: 'ModularCrm.Ordering',
     },
   },

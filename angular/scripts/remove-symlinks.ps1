@@ -7,43 +7,47 @@
 $packageDirectories = Get-PackageDirectories
 
 function Remove-Symlinks {
-    Write-Host "🗑️  Removing symlinks from library directories...`n" -ForegroundColor Cyan
+    Write-Host "Removing symlinks from library directories...`n" -ForegroundColor Cyan
     
     $totalRemoved = 0
     $totalSkipped = 0
     
     foreach ($packageDir in $packageDirectories) {
-        $resolvedPath = Resolve-Path $packageDir -ErrorAction SilentlyContinue
+        $resolvedPath = Resolve-Path "$PSScriptRoot/$packageDir" -ErrorAction SilentlyContinue
         $targetNodeModules = Join-Path $resolvedPath "node_modules"
         
         if (-not $targetNodeModules) {
-            Write-Host "⚠️  Skipping $packageDir (directory not found)" -ForegroundColor Yellow
+            Write-Host "Skipping $packageDir (directory not found)" -ForegroundColor Yellow
             $totalSkipped++
             continue
         }
         
-        Write-Host "📁 Processing $packageDir..." -ForegroundColor Cyan
+        Write-Host "Processing $packageDir..." -ForegroundColor Cyan
         
         if (-not (Test-Path $targetNodeModules)) {
-            Write-Host "   ⚠️  No node_modules directory found" -ForegroundColor Yellow
+            Write-Host "   No node_modules directory found" -ForegroundColor Yellow
             $totalSkipped++
             continue
         }
         
         try {
             # Remove the entire node_modules directory (which contains symlinks)
-            Remove-Item $targetNodeModules -Recurse -Force
-            Write-Host "   ✅ Removed node_modules directory" -ForegroundColor Green
+            if ($IsWindows -or $env:OS -eq "Windows_NT") {
+                cmd /c "rmdir /S /Q `"$targetNodeModules`""
+            } else {
+                Remove-Item $targetNodeModules -Recurse -Force
+            }
+            Write-Host "   Removed node_modules directory" -ForegroundColor Green
             $totalRemoved++
         }
         catch {
-            Write-Host "   ❌ Failed to remove $targetNodeModules`: $($_.Exception.Message)" -ForegroundColor Red
+            Write-Host "   Failed to remove ${targetNodeModules}: $($_.Exception.Message)" -ForegroundColor Red
             $totalSkipped++
         }
     }
     
-    Write-Host "`n🎉 Cleanup completed! Removed: $totalRemoved, Skipped: $totalSkipped" -ForegroundColor Green
-    Write-Host "💡 Libraries will now use their own local dependencies (if any)" -ForegroundColor Cyan
+    Write-Host "`nCleanup completed! Removed: $totalRemoved, Skipped: $totalSkipped" -ForegroundColor Green
+    Write-Host "Libraries will now use their own local dependencies (if any)" -ForegroundColor Cyan
 }
 
 # Run the cleanup
