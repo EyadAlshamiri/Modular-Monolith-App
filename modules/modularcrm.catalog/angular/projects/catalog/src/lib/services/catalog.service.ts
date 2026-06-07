@@ -4,8 +4,8 @@ import { RestService } from '@abp/ng.core';
 @Injectable({
   providedIn: 'root',
 })
-export class CatalogService {
-  apiName = 'Catalog';
+export class catalogService {
+  apiName = 'catalog';
   private restService = inject(RestService);
 
   constructor() {}

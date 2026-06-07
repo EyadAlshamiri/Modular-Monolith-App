@@ -1,5 +1,5 @@
 {
-  "name": "Catalog",
+  "name": "catalog",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,11 +10,11 @@
   },
   "private": true,
   "dependencies": {
-    "@abp/ng.core": "~10.4.0",
-    "@abp/ng.oauth": "~10.4.0",
-    "@abp/ng.theme.shared": "~10.4.0",
-    "@abp/ng.components": "~10.4.0",
-    "@volo/abp.commercial.ng.ui": "~10.4.0",
+    "@abp/ng.core": "~10.4.1",
+    "@abp/ng.oauth": "~10.4.1",
+    "@abp/ng.theme.shared": "~10.4.1",
+    "@abp/ng.components": "~10.4.1",
+    "@volo/abp.commercial.ng.ui": "~10.4.1",
     "@angular/animations": "~20.0.0",
     "@angular/common": "~20.0.0",
     "@angular/compiler": "~20.0.0",
@@ -29,7 +29,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@abp/ng.schematics": "~10.4.0",
+    "@abp/ng.schematics": "~10.4.1",
     "@angular-devkit/build-angular": "~20.0.0",
     "@angular-eslint/builder": "~20.0.0",
     "@angular-eslint/schematics": "~20.0.0",

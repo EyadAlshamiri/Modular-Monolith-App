@@ -1,3 +1,3 @@
-export const enum eCatalogRouteNames {
-  Catalog = 'Catalog',
+export const enum ecatalogRouteNames {
+  catalog = 'catalog',
 }

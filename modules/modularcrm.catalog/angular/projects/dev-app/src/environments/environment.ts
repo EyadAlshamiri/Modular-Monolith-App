@@ -11,8 +11,8 @@ export const environment = {
   },
   apis: {
     default: {
-      url: '',
-      rootNamespace: 'ModularCrm.Catalog',
+      url: 'https://localhost:44381',
+      rootNamespace: 'modularcrm.catalog',
     },
   },
 } as Environment;

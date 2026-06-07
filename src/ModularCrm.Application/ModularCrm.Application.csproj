@@ -1,18 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\common.props" />
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <RootNamespace>ModularCrm</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ModularCrm.Domain\ModularCrm.Domain.csproj" />
     <ProjectReference Include="..\ModularCrm.Application.Contracts\ModularCrm.Application.Contracts.csproj" />
+    <ProjectReference Include="../../modules/modularcrm.ordering/ModularCrm.Ordering/ModularCrm.Ordering.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="10.4.0" />
@@ -21,5 +18,4 @@
     <PackageReference Include="Volo.Abp.Identity.Application" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="10.4.0" />
   </ItemGroup>
-
 </Project>

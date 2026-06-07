@@ -1,7 +1,9 @@
+import { ORDERING_ROUTES } from '@modular-crm/ordering';
 import { authGuard, permissionGuard } from '@abp/ng.core';
 import { Routes } from '@angular/router';
 
 export const APP_ROUTES: Routes = [
+  { path: 'ordering', children: ORDERING_ROUTES, canActivate: [authGuard] },
   {
     path: '',
     pathMatch: 'full',
@@ -27,5 +29,9 @@ export const APP_ROUTES: Routes = [
     path: 'books',
     loadComponent: () => import('./book/book.component').then(c => c.BookComponent),
     canActivate: [authGuard, permissionGuard],
+  },
+  {
+    path: 'catalog',
+    loadChildren: () => import('@catalog').then(m => m.CATALOG_ROUTES),
   },
 ];

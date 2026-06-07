@@ -43,6 +43,10 @@
     },
     "ModularCrm.Catalog": {
       "path": "modules/modularcrm.catalog/ModularCrm.Catalog.abpmdl"
+    },
+    "ModularCrm.Ordering": {
+      "path": "modules/modularcrm.ordering/ModularCrm.Ordering.abpmdl",
+      "isInstalled": true
     }
   },
   "folders": {

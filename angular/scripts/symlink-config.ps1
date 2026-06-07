@@ -3,7 +3,9 @@
 
 # Define the package directories that need symlink management
 # example: "../../modules/Volo.Abp.Identity.Pro/angular"
-$script:PackageDirectories = @()
+$script:PackageDirectories = @(
+    "../../modules/modularcrm.catalog/angular"
+)
 
 # Define packages that should be symlinked
 $script:PackagesToSymlink = @(

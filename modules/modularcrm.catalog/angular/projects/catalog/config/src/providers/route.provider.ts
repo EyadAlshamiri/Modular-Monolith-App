@@ -5,7 +5,7 @@ import {
   makeEnvironmentProviders,
   provideAppInitializer,
 } from '@angular/core';
-import { eCatalogRouteNames } from '../enums/route-names';
+import { ecatalogRouteNames } from '../enums/route-names';
 
 export const CATALOG_ROUTE_PROVIDERS = [
   provideAppInitializer(() => {
@@ -18,7 +18,7 @@ export function configureRoutes() {
   routesService.add([
     {
       path: '/catalog',
-      name: eCatalogRouteNames.Catalog,
+      name: ecatalogRouteNames.catalog,
       iconClass: 'fas fa-book',
       layout: eLayoutType.application,
       order: 3,
@@ -28,6 +28,6 @@ export function configureRoutes() {
 
 const CATALOG_PROVIDERS: EnvironmentProviders[] = [...CATALOG_ROUTE_PROVIDERS];
 
-export function provideCatalog() {
+export function providecatalog() {
   return makeEnvironmentProviders(CATALOG_PROVIDERS);
 }

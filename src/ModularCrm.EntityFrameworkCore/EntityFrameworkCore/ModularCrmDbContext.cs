@@ -16,7 +16,9 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using ModularCrm.Catalog.Data;
-using ModularCrm.Catalog; 
+using ModularCrm.Catalog;
+using ModularCrm.Ordering.Data;
+using ModularCrm.Ordering;
 
 namespace ModularCrm.EntityFrameworkCore;
 
@@ -24,6 +26,8 @@ namespace ModularCrm.EntityFrameworkCore;
 [ReplaceDbContext(typeof(ITenantManagementDbContext))]
 [ConnectionStringName("Default")]
 [ReplaceDbContext(typeof(ICatalogDbContext))]
+[ReplaceDbContext(typeof(IOrderingDbContext))]
+
 public class ModularCrmDbContext :
     AbpDbContext<ModularCrmDbContext>,
     ITenantManagementDbContext,
@@ -33,6 +37,7 @@ public class ModularCrmDbContext :
 
     public DbSet<Book> Books { get; set; }
     public DbSet<Product> Products { get; set; } //NEW: ADD DBSET PROPERTY
+    public DbSet<Order> Orders { get; set; }
 
     #region Entities from the modules
 
@@ -92,7 +97,10 @@ public class ModularCrmDbContext :
             b.ConfigureByConvention(); //auto configure for the base class props
             b.Property(x => x.Name).IsRequired().HasMaxLength(128);
         });
-        
+
+        builder.ConfigureCatalog();
+        builder.ConfigureOrdering();
+
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>

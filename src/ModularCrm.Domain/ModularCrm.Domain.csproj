@@ -1,18 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\common.props" />
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <RootNamespace>ModularCrm</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ModularCrm.Domain.Shared\ModularCrm.Domain.Shared.csproj" />
     <ProjectReference Include="..\..\modules\ModularCrm.Catalog\ModularCrm.Catalog\ModularCrm.Catalog.csproj" />
+    <ProjectReference Include="../../modules/modularcrm.ordering/ModularCrm.Ordering/ModularCrm.Ordering.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Emailing" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.Caching" Version="10.4.0" />
@@ -24,11 +21,9 @@
     <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.BlobStoring.Database.Domain" Version="10.4.0" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Volo.Abp.OpenIddict.Domain" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="10.4.0" />
     <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="10.4.0" />
   </ItemGroup>
-
 </Project>
