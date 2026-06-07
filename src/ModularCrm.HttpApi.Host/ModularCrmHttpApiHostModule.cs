@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi;
 using ModularCrm.Catalog;
+using ModularCrm.Ordering;
 using ModularCrm.EntityFrameworkCore;
 using ModularCrm.HealthChecks;
 using ModularCrm.MultiTenancy;
@@ -54,7 +55,8 @@ namespace ModularCrm;
     typeof(AbpAccountWebOpenIddictModule),
     typeof(AbpSwashbuckleModule),
     typeof(AbpAspNetCoreSerilogModule),
-    typeof(CatalogModule)
+    typeof(CatalogModule),
+    typeof(OrderingModule)
     )]
 public class ModularCrmHttpApiHostModule : AbpModule
 {

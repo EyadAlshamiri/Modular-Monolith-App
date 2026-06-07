@@ -31,7 +31,7 @@ namespace ModularCrm.EntityFrameworkCore;
 public class ModularCrmDbContext :
     AbpDbContext<ModularCrmDbContext>,
     ITenantManagementDbContext,
-    IIdentityDbContext , ICatalogDbContext
+    IIdentityDbContext, ICatalogDbContext, IOrderingDbContext
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
 

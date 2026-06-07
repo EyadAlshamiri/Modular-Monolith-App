@@ -37,5 +37,14 @@ public class OrderingModule : AbpModule
              * options.AddRepository<Question, EfCoreQuestionRepository>();
              */
         });
+
+        Configure<AbpAspNetCoreMvcOptions>(options =>
+        {
+            options.ConventionalControllers.Create(typeof(OrderingModule).Assembly, settings =>
+            {
+                settings.RootPath = "ordering";
+            });
+        });
+
     }
 }
