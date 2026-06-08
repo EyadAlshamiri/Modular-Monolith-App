@@ -8,6 +8,7 @@ export interface OrderCreationDto {
 export interface OrderDto {
   id?: string;
   productId?: string;
+  productName?: string;
   customerName?: string;
   state?: OrderState;
 }

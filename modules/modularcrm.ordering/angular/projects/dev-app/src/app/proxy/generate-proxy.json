@@ -4740,8 +4740,8 @@
                     }
                   ],
                   "returnValue": {
-                    "type": "ModularCrm.Ordering.OrderDto",
-                    "typeSimple": "ModularCrm.Ordering.OrderDto",
+                    "type": "System.Void",
+                    "typeSimple": "System.Void",
                     "summary": null
                   }
                 }
@@ -4807,8 +4807,8 @@
                 }
               ],
               "returnValue": {
-                "type": "ModularCrm.Ordering.OrderDto",
-                "typeSimple": "ModularCrm.Ordering.OrderDto",
+                "type": "System.Void",
+                "typeSimple": "System.Void",
                 "summary": null
               },
               "allowAnonymous": null,
@@ -7132,6 +7132,22 @@
           "jsonName": null,
           "type": "ModularCrm.Ordering.OrderState",
           "typeSimple": "enum",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null,
+          "isNullable": false,
+          "summary": null,
+          "description": null,
+          "displayName": null
+        },
+        {
+          "name": "ProductName",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
           "isRequired": false,
           "minLength": null,
           "maxLength": null,

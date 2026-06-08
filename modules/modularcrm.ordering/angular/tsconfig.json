@@ -2,9 +2,17 @@
   "extends": "./tsconfig.prod.json",
   "compilerOptions": {
     "paths": {
-      "@modular-crm/ordering": ["projects/ordering/src/public-api.ts"],
+      "@modular-crm/ordering": [
+        "projects/ordering/src/public-api.ts"
+      ],
       "@modular-crm/ordering/config": [
         "projects/ordering/config/src/public-api.ts"
+      ],
+      "@modular-crm/catalog": [
+        "../../modularcrm.catalog/angular/projects/catalog/src/public-api.ts"
+      ],
+      "@modular-crm/catalog/config": [
+        "../../modularcrm.catalog/angular/projects/catalog/config/src/public-api.ts"
       ]
     }
   }

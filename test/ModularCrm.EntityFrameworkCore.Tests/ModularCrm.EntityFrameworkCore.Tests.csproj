@@ -1,21 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\common.props" />
+	<Import Project="..\..\common.props" />
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <RootNamespace>ModularCrm</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>ModularCrm</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\ModularCrm.EntityFrameworkCore\ModularCrm.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\ModularCrm.Application.Tests\ModularCrm.Application.Tests.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\ModularCrm.EntityFrameworkCore\ModularCrm.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\ModularCrm.Application.Tests\ModularCrm.Application.Tests.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="10.4.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="10.4.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+	</ItemGroup>
 
-~
+</Project>

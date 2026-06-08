@@ -9,3 +9,5 @@ public partial class ProductToProductDtoMapper : MapperBase<Product, ProductDto>
 
     public override partial void Map(Product source, ProductDto destination);
 }
+
+

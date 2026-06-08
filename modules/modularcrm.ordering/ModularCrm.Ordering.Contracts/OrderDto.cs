@@ -8,5 +8,6 @@ namespace ModularCrm.Ordering
         public Guid ProductId { get; set; }
         public string CustomerName { get; set; } = null!;
         public OrderState State { get; set; }
+        public string ProductName { get; set; } = null!;
     }
 }

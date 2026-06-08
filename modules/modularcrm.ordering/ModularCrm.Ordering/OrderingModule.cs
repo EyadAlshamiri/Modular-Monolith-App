@@ -1,3 +1,4 @@
+using ModularCrm.Catalog;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Mapperly;
 using Volo.Abp.Modularity;
@@ -9,6 +10,7 @@ using Volo.Abp.AspNetCore.Mvc;
 namespace ModularCrm.Ordering;
 
 [DependsOn(
+    typeof(CatalogContractsModule),
     typeof(OrderingContractsModule),
     typeof(AbpDddApplicationModule),
     typeof(AbpMapperlyModule),
