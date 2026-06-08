@@ -1,3 +1,4 @@
+using ModularCrm.Catalog;
 using ModularCrm.Ordering;
 using ModularCrm.Localization;
 using Volo.Abp.AuditLogging;
@@ -18,6 +19,7 @@ using Volo.Abp.TenantManagement;
 namespace ModularCrm;
 
 [DependsOn(
+    typeof(CatalogContractsModule),
     typeof(OrderingContractsModule),
     typeof(AbpAuditLoggingDomainSharedModule),
     typeof(AbpBackgroundJobsDomainSharedModule),

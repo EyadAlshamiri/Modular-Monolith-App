@@ -29,6 +29,12 @@
       ],
       "@modular-crm/ordering/config": [
         "../modules/modularcrm.ordering/angular/projects/ordering/config/src/public-api.ts"
+      ],
+      "@modular-crm/catalog": [
+        "../modules/modularcrm.catalog/angular/projects/catalog/src/public-api.ts"
+      ],
+      "@modular-crm/catalog/config": [
+        "../modules/modularcrm.catalog/angular/projects/catalog/config/src/public-api.ts"
       ]
     },
     "useDefineForClassFields": false

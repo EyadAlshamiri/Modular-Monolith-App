@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ModularCrm.Domain.Shared\ModularCrm.Domain.Shared.csproj" />
     <ProjectReference Include="../../modules/modularcrm.ordering/ModularCrm.Ordering.Contracts/ModularCrm.Ordering.Contracts.csproj" />
+    <ProjectReference Include="../../modules/modularcrm.catalog/ModularCrm.Catalog/ModularCrm.Catalog.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="10.4.0" />

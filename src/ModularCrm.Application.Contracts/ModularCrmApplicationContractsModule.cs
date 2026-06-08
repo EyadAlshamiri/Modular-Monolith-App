@@ -1,3 +1,4 @@
+using ModularCrm.Catalog;
 using ModularCrm.Ordering;
 using Volo.Abp.Account;
 using Volo.Abp.Modularity;
@@ -10,6 +11,7 @@ using Volo.Abp.TenantManagement;
 namespace ModularCrm;
 
 [DependsOn(
+    typeof(CatalogModule),
     typeof(OrderingContractsModule),
     typeof(ModularCrmDomainSharedModule),
     typeof(AbpFeatureManagementApplicationContractsModule),

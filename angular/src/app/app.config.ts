@@ -1,3 +1,4 @@
+import { provideCatalog } from '@modular-crm/catalog/config';
 import { provideOrdering } from '@modular-crm/ordering/config';
 import { provideAbpCore, withOptions } from '@abp/ng.core';
 import { provideAbpOAuth } from '@abp/ng.oauth';
@@ -23,6 +24,7 @@ import { providecatalog } from '@catalog/config';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(APP_ROUTES),
+    provideCatalog(),
     provideOrdering(),
     APP_ROUTE_PROVIDER,
     FOOTER_PROVIDER,

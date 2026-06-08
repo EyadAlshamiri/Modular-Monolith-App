@@ -42,7 +42,8 @@
       "creationTime": "06/03/2026 08:00:26 +00:00"
     },
     "ModularCrm.Catalog": {
-      "path": "modules/modularcrm.catalog/ModularCrm.Catalog.abpmdl"
+      "path": "modules/modularcrm.catalog/ModularCrm.Catalog.abpmdl",
+      "isInstalled": true
     },
     "ModularCrm.Ordering": {
       "path": "modules/modularcrm.ordering/ModularCrm.Ordering.abpmdl",

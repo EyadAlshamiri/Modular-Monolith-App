@@ -4,11 +4,11 @@
   <abp-card-body>
     <div class="list-group">
       @for (order of orders; track order.id) {
-        <div class="list-group-item">
-          <strong>Customer:</strong> {{ order.customerName }} <br />
-          <strong>Product:</strong> {{ order.productName }} <br />
-          <strong>State:</strong> {{ order.state }}
-        </div>
+      <div class="list-group-item">
+        <strong>Customer:</strong> {{ order.customerName }} <br />
+        <strong>Product:</strong> {{ order.productName }} <br />
+        <strong>State:</strong> {{ order.state }}
+      </div>
       }
     </div>
   </abp-card-body>
